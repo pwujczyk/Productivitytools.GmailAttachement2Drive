@@ -5,11 +5,6 @@ function SaveAttachement(attachment, targetDirectory) {
   console.log(newsweek.getName());
 }
 
-function sendThankYou(thread) {
-  //console.log(thread);
-
-  }
-
 function myFunction() {
 
   var searchQuery = PropertiesService.getScriptProperties().getProperty("SearchQuery");
@@ -24,7 +19,6 @@ function myFunction() {
       for (var k = 0; k < attachments.length; k++) {
         console.log("saving attachement")
         SaveAttachement(attachments[k], targetDirectory)
-        sendThankYou(thread);
         
         thread.reply("Dziękuje")
         thread.moveToArchive();
