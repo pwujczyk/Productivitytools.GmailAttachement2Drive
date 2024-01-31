@@ -27,6 +27,7 @@ function myFunction() {
         sendThankYou(thread);
         
         thread.reply("Dziękuje")
+        thread.moveToArchive();
       }
     }
   }
