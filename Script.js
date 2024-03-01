@@ -11,9 +11,13 @@ function myFunction() {
   var targetDirectory = PropertiesService.getScriptProperties().getProperty("TargetDirectory");
 
   var threads = GmailApp.search(searchQuery)
+  console.log("threads count")
+  console.log(threads.length)
   for (var t = 0; t < threads.length; t++) {
     var thread = threads[t]
     var msgs = thread.getMessages();
+    console.log("messages count")
+    console.log(msgs.length);
     for (var j = 0; j < msgs.length; j++) {
       var attachments = msgs[j].getAttachments();
       for (var k = 0; k < attachments.length; k++) {
